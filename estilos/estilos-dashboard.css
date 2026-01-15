@@ -1,0 +1,21 @@
+#Dashboard {
+    display: none; 
+    margin: 50px auto; 
+    max-width: 600px; 
+    padding: 20px;
+    background-color: #000000;
+    border: 2px solid var(--color-linea); 
+    border-radius: 10px;
+    text-align: center;
+}
+
+#Dashboard h2 {
+    color: var(--color-linea);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#Dashboard p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
