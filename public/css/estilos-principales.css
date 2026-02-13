@@ -1,0 +1,85 @@
+:root{
+    --color-linea: #FFCC00;
+    --color-contraste:#2a762a
+}
+@font-face {
+    font-family: "pixel";
+    src: url(/recursos/pixel-font.ttf);
+}
+body {
+    font-family: "pixel";
+    color: #ffffff; 
+    background-color: #000000; 
+    background-image: radial-gradient(circle at center, var(--color-contraste) 0%, #000000 70%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #333333;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid var(--color-linea); 
+}
+
+nav {
+    background-color: #131313; 
+    text-align: center;
+    padding: 5px 0;
+}
+
+nav a {
+    color: #E0E0E0;
+    text-decoration: none;
+    padding: 5px  10px;
+    margin: 0 10px;
+    border-radius: 5px;
+    /*Deberia geerar una transicion*/
+    transition: background-color 0.2s, color 0.2s;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: var(--color-linea);
+    color: #000000;
+}
+
+main {
+    flex-grow: 1; 
+    padding: 20px;
+}
+
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    font-size: 11px;
+    border-top: 2px solid var(--color-linea);
+    margin-top: auto; 
+}
+
+main h1 {
+    color: var(--color-linea); 
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed var(--color-contraste); 
+}
+
+
+main p {
+    background-color: #000000; 
+    line-height: 1.5;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 700px; 
+    border: 3px solid var(--color-contraste); 
+}
+
+main p strong {
+    color: var(--color-linea); 
+    font-weight: bold;
+}
+

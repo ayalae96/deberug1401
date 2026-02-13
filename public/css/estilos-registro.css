@@ -1,0 +1,120 @@
+.starter-seleccion {
+    background: none;
+    border: 3px solid transparent;
+    padding: 3px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 3px;
+    transition: border 0.2s ease-in-out; 
+}
+.starter-seleccion.activo {
+    border: 3px solid var(--color-contraste);  
+}
+.starter-seleccion img {
+    display: block;
+    width: 80px;
+    height: 80px;
+}
+#Registro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh; 
+    }
+
+#Registro form {
+    background-color: #333333;
+    padding: 30px 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;          /* Activamos Flexbox */
+    flex-direction: column; /* Alineamos los hijos en vertical */
+    gap: 15px;             /* Espacio automático entre inputs y botón */
+}
+#Registro legend {
+    font-size: 18px ;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 2px solid var(--color-contraste);
+    padding-bottom: 10px;
+}
+#Registro input[type="submit"] {
+    width: 100%; 
+    font-family: "pixel";
+    padding: 10px 20px;
+    margin: 10PX;
+    background-color: var(--color-contraste);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+#Registro .btn-registrar {
+    width: 100%; 
+    font-family: "pixel", sans-serif;
+    padding: 12px;
+    background-color: var(--color-contraste, #4CAF50); /* Usa tu variable o un verde */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#Registro .btn-registrar:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+}
+.starter-seleccion img {
+    width: 80px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: 0.3s;
+}
+
+/* Cuando el radio button interno está marcado, aplicamos estilo a la imagen */
+.starter-seleccion input[type="radio"]:checked + img {
+    border: 3px solid var(--color-contraste);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+/* Ocultamos el circulito del radio button */
+.starter-seleccion input[type="radio"] {
+    display: none;
+}
+
+/* Estilo normal de la imagen */
+.starter-seleccion img {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    transition: all 0.2s;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Estilo cuando el input está seleccionado (Equivale a tu clase .activo de JS) */
+.starter-seleccion input[type="radio"]:checked + img {
+    border: 3px solid var(--color-contraste, #4CAF50);
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.opciones-pokemon {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+#Registro form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}   

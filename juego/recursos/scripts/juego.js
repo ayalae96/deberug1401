@@ -16,7 +16,7 @@ function obtenerSprite(numero){
 const nombreDiv = document.getElementById('main-juego');
 if (nombreDiv) {
     nombreDiv.innerHTML = `<h2>¡Un pokemon salvaje a aparecido! ¡Atrapalo!</h2>`;
-    nombreDiv.innerHTML += `<p><br>   <img src="recursos/sprites/${generarPokemonAleatorio(1,151)}"></p>`;
+    nombreDiv.innerHTML += `<p><br>   <img src="/juego/recursos/sprites/${generarPokemonAleatorio(1,151)}"></p>`;
     nombreDiv.innerHTML += `<button id="BtnAtrapar">Capturar</button>`;
 
     atrapar = document.getElementById('BtnAtrapar');
