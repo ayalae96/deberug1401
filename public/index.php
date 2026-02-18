@@ -1,7 +1,4 @@
 <?php
-// index.php - Ubicado en /public/
-
-// Salimos de /public/ para entrar en /conector/ y /app/
 require_once __DIR__ . '/../app/config/database.php'; 
 require_once __DIR__ . '/../app/controllers/MainController.php';
 
@@ -31,8 +28,9 @@ $vista_a_cargar = $controller->gestionarNavegacion();
         <?php if (isset($_SESSION['usuario_id'])): ?>
             <a href="index.php?seccion=Inicio">Inicio</a>
             <a href="index.php?seccion=Jugar">Jugar</a>
-            <a href="index.php?seccion=Pokedex">Pokedex (CRUD)</a>
+            <a href="index.php?seccion=Pokedex">Pokedex</a>
             <a href="index.php?seccion=Contactanos">Contacto</a>
+            <a href="index.php?seccion=Informacion">Informacion</a>
         <?php else: ?>
             <a href="index.php?seccion=Login">Entrar</a>
             <a href="index.php?seccion=Registro">Registrarse</a>
@@ -41,7 +39,6 @@ $vista_a_cargar = $controller->gestionarNavegacion();
 
     <main id="ContenedorPrincipal">
         <?php 
-            // Carga concordante desde la carpeta de vistas [cite: 42]
                 $path = __DIR__ . "/../app/views/" . $vista_a_cargar;            if (file_exists($path)) {
                 include $path;
             } else {
