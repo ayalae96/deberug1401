@@ -1,15 +1,18 @@
 FROM php:8.2-apache
 
-# Habilitar el módulo de reescritura de Apache
+# 1. Instalar y habilitar la extensión mysqli para MySQL
+RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
+
+# 2. Habilitar mod_rewrite para que las rutas de tu MVC funcionen
 RUN a2enmod rewrite
 
-# Copiar todo el proyecto al contenedor
+# 3. Copiar los archivos de tu proyecto al servidor
 COPY . /var/www/html/
 
-# Cambiar el Document Root a la carpeta 'public'
+# 4. Configurar Apache para que apunte a la carpeta /public
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
 
-# Exponer el puerto 80
-EXPOSE 80
+# 5. Asegurar permisos para que el servidor pueda leer los archivos
+RUN chown -R www-data:www-data /var/www/html

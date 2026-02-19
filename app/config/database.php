@@ -1,5 +1,6 @@
 <?php
-$host = "localhost";
+$host = getenv('DB_HOST');
+$db   = getenv('DB_NAME');
 $usuario_db = "root";  // Cambia esto por tu usuario de MySQL
 $clave_db = "";        // Cambia esto por tu contraseña de MySQL
 $nombre_db = "test_smash"; // El nombre de tu base de datos
