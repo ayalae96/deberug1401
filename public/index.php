@@ -9,7 +9,7 @@ $vista_a_cargar = $controller->gestionarNavegacion();
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>PokeSmash! - Proyecto DAW</title>
+    <title>PokeSmash! - Proyecto</title>
     <link rel="stylesheet" href="css/estilos-principales.css">
     <link rel="stylesheet" href="css/estilos-dashboard.css">
 </head>
@@ -17,7 +17,7 @@ $vista_a_cargar = $controller->gestionarNavegacion();
 
     <?php
         include __DIR__."/../app/views/header.php";
-        include __DIR__ . "/../app/views/"."nav.php"; 
+        include __DIR__ . "/../app/views/nav.php"; 
     ?>
 
     <main id="ContenedorPrincipal">

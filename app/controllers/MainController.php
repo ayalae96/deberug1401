@@ -1,24 +1,20 @@
 <?php
-// app/controllers/MainController.php
 
 require_once '../app/models/Usuario.php';
 
-class MainController {
-    private $usuarioModel;
+    class MainController {
+        private $usuarioModel;
 
-    public function __construct() {
-        // Usamos la variable $conn que viene del include global en index.php
-        global $conn; 
-        $this->usuarioModel = new Usuario($conn);
-    }
+        public function __construct() {
+            global $conn; 
+            $this->usuarioModel = new Usuario($conn);
+        }
     
     public function gestionarNavegacion() {
-        // Iniciar sesión si no está iniciada
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
 
-        // --- MANEJO DE POST (Formularios) ---
         if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['action'])) {
             if ($_POST['action'] == 'login') {
                 $this->procesarLogin();
@@ -27,13 +23,10 @@ class MainController {
             }
         }
 
-        // --- SISTEMA DE RUTAS (GET) ---
-        // Si el usuario está logueado, ve las rutas privadas
         if (isset($_SESSION['usuario_id'])) {
             return $this->obtenerRutaPrivada();
         } 
         
-        // Si no, ve las rutas públicas
         return $this->obtenerRutaPublica();
     }
 
