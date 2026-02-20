@@ -11,7 +11,7 @@ for (let i = 1; i <= 151; i++) {
     pokemonDiv.classList.add('pokemon-card');
     pokemonDiv.setAttribute('onclick', `mostrarNumero(${i})`);
 
-    pokemonDiv.innerHTML = `<img src="juego/recursos/sprites/0${numeroFormateado}.png" 
+    pokemonDiv.innerHTML = `<img src="../juego/recursos/sprites/0${numeroFormateado}.png" 
                                 alt="Pokemon #${i}">`;
     galeria.appendChild(pokemonDiv);
 }

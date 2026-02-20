@@ -2,6 +2,10 @@
 <?php if(isset($_SESSION['error'])): ?>
     <p style="color:red;"><?php echo $_SESSION['error']; unset($_SESSION['error']); ?></p>
 <?php endif; ?>
+    <link rel="stylesheet" href="../../public/css/estilos-registro.css">
+        <link rel="stylesheet" href="../../public/css/estilos-principales.css">
+
+
 <div id="Registro">
     <form method="POST" action="">
         <input type="hidden" name="action" value="login">

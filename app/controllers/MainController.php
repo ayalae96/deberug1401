@@ -100,7 +100,7 @@ class MainController {
             'Contactanos' => 'contactanos.php',
             'Informacion' => 'info.php',
             'Tutorial'    => 'tutorial.php',
-            'Jugar'       => 'juego/juego.php', // Ojo con esta ruta si está en subcarpeta
+            'Jugar'       => '../../juego/juego.php', // Ojo con esta ruta si está en subcarpeta
             'Captura'     => 'captura_view.php', // <--- AGREGA ESTA LÍNEA
             'Logout'      => '../controllers/logout.php' // Caso especial
         ];

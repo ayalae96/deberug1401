@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="estilos/pokedex.css">
+<link rel="stylesheet" href="../../public/css/pokedex.css">
 <div id="galeria-pokemon">
 </div>
-<script src="scripts/pokedex.js"></script>
+<script src="../../public/js/pokedex.js"></script>
