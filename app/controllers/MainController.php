@@ -82,10 +82,9 @@ class MainController {
         if ($resultado['exito']) {
             $_SESSION['usuario_id'] = $resultado['id'];
             $_SESSION['nombre'] = $nombre;
-            $_SESSION['sprite_inicial'] = $inicial; // Guardamos visualmente cuál eligió
+            $_SESSION['sprite'] = $inicial; // Guardamos visualmente cuál eligió
             
-            header("Location: index.php?seccion=Inicio");
-            exit();
+            header("Location: index.php?seccion=Captura"); // <--- REDIRIGE A CAPTURA            exit();
         } else {
             $_SESSION['error'] = $resultado['mensaje'];
         }
@@ -102,6 +101,7 @@ class MainController {
             'Informacion' => 'info.php',
             'Tutorial'    => 'tutorial.php',
             'Jugar'       => 'juego/juego.php', // Ojo con esta ruta si está en subcarpeta
+            'Captura'     => 'captura_view.php', // <--- AGREGA ESTA LÍNEA
             'Logout'      => '../controllers/logout.php' // Caso especial
         ];
 

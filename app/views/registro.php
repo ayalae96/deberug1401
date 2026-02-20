@@ -32,13 +32,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $mensaje = "<script>alert('Las contraseñas no coinciden.');</script>";
 
             if ($resultado->num_rows > 0) {
-            $fila = $resultado->fetch_assoc();
-            $_SESSION['usuario_id'] = $fila['IdUsuario'];
-            $_SESSION['nombre'] = $fila['alias'];
+                $fila = $resultado->fetch_assoc();
+                $_SESSION['usuario_id'] = $fila['IdUsuario'];
+                $_SESSION['nombre'] = $fila['alias'];
 
             }
-            // En lugar de mostrarRegistro(), redirigimos al login o dashboard
-            header("Location: index.php?captura");
+            $_SESSION['usuario_id'] = $conn->insert_id;
+            $_SESSION['sprite'] = $inicialId; // Aquí guardas "0001", "0004", etc.
+           header("Location: index.php?seccion=Captura"); // O la sección donde cargues captura_view
             exit();
         } else {
             $mensaje = "Error: " . $conn->error;

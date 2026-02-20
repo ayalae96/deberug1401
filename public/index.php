@@ -43,6 +43,7 @@ $vista_a_cargar = $controller->gestionarNavegacion();
                 include $path;
             } else {
                 echo "<p>Contenido no disponible temporalmente.</p>";
+                echo "<p style='color:red; font-weight:bold;'>DEBUG: PHP está buscando la vista exactamente en: <br>" . $path . "</p>";
             }
         ?>
     </main>
